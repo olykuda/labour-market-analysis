@@ -21,14 +21,14 @@
       </tr>
       </thead>
       <tbody>
-        {% for row in rows %}
+        {% for result_object in cursor %}
       <tr>
-        <td>{{row.id}}</td>
-        <td>{{row.title}}</td>
-        <td>{{row.city}}</td>
-        <td>{{row.company}}</td>
-        <td>{{row.category}}</td>
-        <td>{{row.date_published}}</td>
+        <td>{{result_object['_id']}}</td>
+        <td>{{result_object['title']}}</td>
+        <td>{{result_object['city']}}</td>
+        <td>{{result_object['company']}}</td>
+        <td>{{result_object['category']}}</td>
+        <td>{{result_object['date_published']}}</td>
       </tr>
         {% endfor %}
       </tbody>

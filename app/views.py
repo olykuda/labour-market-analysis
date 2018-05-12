@@ -5,6 +5,5 @@ from . import models
 
 @app.route('/')
 def show_db():
-    return render_template('index.html',
-                           rows=models.TestVacancy.query.all()
-                           )
+    my_cursor = models.db.vacancy_collection.find({})
+    return render_template('show_db.html', cursor=my_cursor)
