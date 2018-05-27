@@ -11,8 +11,5 @@ client = MongoClient()
 from . import views
 from . import models
 
-
-# db.app = app
-# db.init_app(app)
-# db.create_all()
-models.TestVacancy().bootstrap(count=100)
+for i in range(500):
+    models.TestVacancy().bootstrap(count=500)
